@@ -1,0 +1,163 @@
+/* style.css */
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    color: #333;
+}
+
+#controls {
+    margin-bottom: 20px;
+}
+
+#controls button {
+    padding: 8px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+#controls button:hover {
+    background-color: #4cae4c;
+}
+
+#graphAllButton {
+     padding: 10px 20px;
+     margin-top: 15px;
+     background-color: #0275d8;
+     color: white;
+     border: none;
+     border-radius: 4px;
+     font-size: 1.1em;
+     cursor: pointer;
+}
+
+#graphAllButton:hover {
+    background-color: #025aa5;
+}
+
+.equation-input-group {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between items */
+}
+
+.equation-input-group label {
+    font-weight: bold;
+    min-width: 80px; /* Give labels a minimum width */
+}
+
+.equation-input {
+    flex-grow: 1; /* Allow input to take available space */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.equation-color {
+    width: 40px;
+    height: 38px; /* Match height of input */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.remove-equation-button {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.remove-equation-button:hover {
+    background-color: #c9302c;
+}
+
+
+.graph-container {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    position: relative; /* Needed for absolute positioning of hover coords */
+    cursor: grab; /* Indicate it's pannable */
+}
+
+canvas {
+    display: block; /* Remove extra space below canvas */
+}
+
+#hover-coords {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    color: #333;
+    pointer-events: none; /* Allow mouse events to pass through to canvas */
+    display: none; /* Hide by default */
+}
+
+#error-message {
+    margin-top: 10px;
+    color: #d9534f; /* Red color for errors */
+    font-weight: bold;
+    min-height: 1.2em; /* Reserve space to prevent layout shifts */
+}
+
+#legend {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    width: 680px; /* Match canvas width */
+}
+
+#legend h2 {
+    margin-top: 0;
+    font-size: 1.2em;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+#legend-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#legend-list li {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.legend-color-box {
+    display: inline-block;
+    width: 20px;
+    height: 15px;
+    margin-right: 10px;
+    border: 1px solid #333;
+}

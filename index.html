@@ -1,12 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hello</title>
+    <title>Matemáticas</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>My page works!!</h1>
-    <img src="logo.png">
+    <h1>Grafica ecuaciones!</h1>
+
+    <div id="controls">
+        <button id="addEquationButton">Añadir ecuación</button>
+        <button id="clearGraphButton">Limpiar gráfica</button>
+    </div>
+
+    <div id="equations-list">
+    </div>
+
+    <button id="graphAllButton">Graficar Todo</button>
+
+    <div class="graph-container">
+        <canvas id="mathGraph" width="700" height="500"></canvas> <div id="hover-coords"></div> <div id="error-message"></div> </div>
+
+    <div id="legend">
+        <h2>Ecuaciones:</h2>
+        <ul id="legend-list">
+            </ul>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
